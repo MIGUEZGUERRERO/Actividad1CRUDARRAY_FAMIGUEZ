@@ -87,12 +87,13 @@ public class programaseries {
 				try {
 
 					System.out.println(Arrays.toString(serie));
-					System.out.println("qué buscas");
+					System.out.println("qué quieres buscar");
 					nombre = lector.nextLine();
-
-					System.out.println(buscador.buscar(serie, nombre));
-
-				} catch (Exception e) {
+					
+					System.out.println("POSICIÓN "+buscador.buscar(serie, nombre));
+					System.out.println("Resultado -1 indica NO ENCONTRADO");
+						
+				} catch (Exception e) {  // Controla la excepción genérica.
 					System.out.println("ERROR");
 				}
 
