@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -21,16 +22,16 @@ public class programaseries {
 
 		Scanner lector = new Scanner(System.in);
 
-		menucrud.mostrarRotulo("");
+		menucrud.mostrarRotulo("x");
 
 		// mostrar todo el array inicial
-		inicializarDatos.inicializar(serie, "");
+		inicializarDatos.inicializar(serie, "x");
 		System.out.println(Arrays.toString(serie) + "serie");
 
-		inicializarDatos.inicializar(plataforma, "");
+		inicializarDatos.inicializar(plataforma, "x");
 		System.out.println(Arrays.toString(plataforma) + "plataforma");
 
-		inicializarDatos.inicializar(genero, "");
+		inicializarDatos.inicializar(genero, "x");
 		System.out.println(Arrays.toString(genero) + "género");
 
 		do {
@@ -42,16 +43,29 @@ public class programaseries {
 			switch (eleccion) {
 			case 1:
 
-				if (longitud == serie.length) {
+				if (longitud == serie.length || longitud == plataforma.length || longitud == genero.length) {
 					System.out.println("el array está completo");
-					break;
+
+				} else {
+
+					System.out.println("introduzca una serie");
+					serie[longitud] = lector.nextLine();
+					System.out.println(Arrays.toString(serie));
+
+					System.out.println("introduzca plataform1a");
+					plataforma[longitud] = lector.nextLine();
+					System.out.println(Arrays.toString(plataforma));
+
+					System.out.println("introduzca género");
+					genero[longitud] = lector.nextLine();
+					System.out.println(Arrays.toString(genero));
+
+					System.out.println("-------------------");
+
+					System.out.println(Arrays.toString(serie));
+					System.out.println(Arrays.toString(plataforma));
+					System.out.println(Arrays.toString(genero));
 				}
-
-				System.out.println("introduzca una serie");
-				serie[longitud] = lector.nextLine();
-				longitud++;
-				System.out.println(Arrays.toString(serie));
-
 				break;
 
 			case 2:
@@ -59,7 +73,7 @@ public class programaseries {
 				try {
 
 					System.out.println(Arrays.toString(serie));
-					System.out.println("indique qué desea modificar?");
+					System.out.println("indique qué Serie desea modificar?");
 					nombre = lector.nextLine();
 					posicion = (buscador.buscar(serie, nombre));
 					System.out.println("indique nueva entrada?");
@@ -67,33 +81,79 @@ public class programaseries {
 					serie[posicion] = nuevaposicion;
 					System.out.println(Arrays.toString(serie));
 
+					System.out.println(Arrays.toString(plataforma));
+					System.out.println("indique qué Plataforma desea modificar?");
+					nombre = lector.nextLine();
+					posicion = (buscador.buscar(plataforma, nombre));
+					System.out.println("indique nueva entrada?");
+					nuevaposicion = lector.nextLine();
+					plataforma[posicion] = nuevaposicion;
+					System.out.println(Arrays.toString(plataforma));
+
+					System.out.println(Arrays.toString(genero));
+					System.out.println("indique qué Género desea modificar?");
+					nombre = lector.nextLine();
+					posicion = (buscador.buscar(genero, nombre));
+					System.out.println("indique nueva entrada?");
+					nuevaposicion = lector.nextLine();
+					genero[posicion] = nuevaposicion;
+					System.out.println(Arrays.toString(genero));
+					
+					System.out.println("-------------------");
+
+					System.out.println(Arrays.toString(serie));
+					System.out.println(Arrays.toString(plataforma));
+					System.out.println(Arrays.toString(genero));
+
 				} catch (Exception e) {
 					System.out.println("error");
 				}
 				break;
 
 			case 3:
-				System.out.println("el array contiene: " + Arrays.toString(serie));
-				System.out.println("indique la posición qué desea eliminar?");
-				delete = lector.nextInt();
-				deletecadena(serie, delete);
 
-				System.out.println("el array contiene ahora: " + Arrays.toString(serie));
+				try {
+					System.out.println("el array contiene: ");
+					System.out.println(Arrays.toString(serie));
+					System.out.println(Arrays.toString(plataforma));
+					System.out.println(Arrays.toString(genero));
+					
+					System.out.println("indique la posición qué desea eliminar?");
+					delete = lector.nextInt();
+					deletecadena(serie, delete);
+					deletecadena(plataforma, delete);
+					deletecadena(genero, delete);
+					
+					System.out.println("el array contiene ahora: ");
+					System.out.println(Arrays.toString(serie));
+					System.out.println(Arrays.toString(plataforma));
+					System.out.println(Arrays.toString(genero));
+					
+				} catch (Exception e) { // Controla la excepción genérica.
+					System.out.println("ERROR");
+					e.printStackTrace();
 
+				}
 				break;
 
 			case 4:
 
 				try {
 
-					System.out.println(Arrays.toString(serie));
-					System.out.println("qué buscas");
+					
+					System.out.println("qué serie quiere buscar");
 					nombre = lector.nextLine();
 
-					System.out.println(buscador.buscar(serie, nombre));
+					System.out.println("existe una coincidencia en la posición " + buscador.buscar(serie, nombre));
+					System.out.println("Resultado -1 indica NO ENCONTRADO");
+					
+					System.out.println(Arrays.toString(serie));
+					System.out.println(Arrays.toString(plataforma));
+					System.out.println(Arrays.toString(genero));
 
-				} catch (Exception e) {
+				} catch (Exception e) { // Controla la excepción genérica.
 					System.out.println("ERROR");
+					e.printStackTrace();
 				}
 
 				break;
