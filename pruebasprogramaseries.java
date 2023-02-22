@@ -2,14 +2,14 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class programaseries {
+public class pruebasprogramaseries {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		String[] serie = new String[20];
-		String[] plataforma = new String[20];
-		String[] genero = new String[20];
+		String[] serie = new String[5];
+		String[] plataforma = new String[5];
+		String[] genero = new String[5];
 
 		String nombre;
 		int longitud = 0;
