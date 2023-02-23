@@ -1,19 +1,25 @@
-
+/**
+ * Clase que contiene metodo que interactua con la consola principal, contiene
+ * inicializarDatos
+ * 
+ * @author Francisco Miguez
+ * @version 1.0
+ */
 public class inicializarDatos {
-
 	/**
-	 * Metodo para incicializar el array.
+	 * Metodo para inicializar array
 	 * 
-	 * @author Francisco Míguez.
+	 * @author Francisco Miguez
 	 * @version 1.0
-	 * @return Devuelve el array calculando las posiciones que tiene.
-	 * @see CRUD ARRAY EJERCICIO IMF.
+	 * @param lista array vacio
+	 * @param dato  dentro del array
 	 */
 
 	public static void inicializar(String[] lista, String dato) {
 		// Recibe un array de String y lo inicializa.
-
-		int longitud = lista.length; // Se evita que cada vuelta de bucle tenga que realizar una operación más.
+		// Variable longitud para calcular tamaño del array.
+		// Se evita que cada vuelta de bucle tenga que realizar una operación más.
+		int longitud = lista.length;
 		for (int i = 0; i < longitud; i++) {
 			lista[i] = dato;
 		}

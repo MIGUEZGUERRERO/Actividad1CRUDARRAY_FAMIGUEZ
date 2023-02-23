@@ -2,8 +2,21 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * Clase que contiene metodo principal para ejecutar el programaseries
+ * 
+ * @author Francisco Miguez.
+ * @version 1.6
+ */
 public class pruebasprogramaseries {
-
+	/**
+	 * Entrada a programaseries. Se declaran los array que contienen las series
+	 * recogidas por usuario
+	 * 
+	 * @author Francisco Miguez.
+	 * @version 1.6
+	 * @param args dato de entrada
+	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -189,7 +202,7 @@ public class pruebasprogramaseries {
 		 * Método privado para "eliminar" la posición dentro de un array, realmente la
 		 * sustituye.
 		 * 
-		 * @author Francisco Míguez.
+		 * @author Francisco Miguez.
 		 * @version 1.3
 		 * @see CRUD ARRAY EJERCICIO IMF.
 		 */

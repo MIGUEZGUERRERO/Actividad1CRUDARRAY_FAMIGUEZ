@@ -1,14 +1,18 @@
-
+/**
+ * Clase que contiene metodo que interactua con la consola principal, contiene
+ * menu
+ * 
+ * @author Francisco Miguez
+ * @version 1.3
+ */
 public class menucrud {
-
 	/**
 	 * Inserta mensaje de bienvenida al programa principal.
 	 * 
-	 * @author Francisco Míguez.
+	 * @author Francisco Miguez
 	 * @version 1.1
-	 * @see CRUD ARRAY EJERCICIO IMF.
+	 * @param texto a mostrar en rotulo
 	 */
-
 	public static void mostrarRotulo(String texto) {
 		// Mensaje de bienvenida para mostrar por consola.
 
@@ -18,12 +22,11 @@ public class menucrud {
 	}
 
 	/**
-	 * Inserta Menú a programa principal.
+	 * Inserta Menú a programa principal
 	 * 
-	 * @author Francisco Míguez.
+	 * @author Francisco Miguez
 	 * @version 1.2
 	 * @return Devuelve número entero dependiendo de la eleción del usuario.
-	 * @see CRUD ARRAY EJERCICIO IMF.
 	 */
 	public static int mostrarMenu() {
 		// Menú para mostrar por consola.

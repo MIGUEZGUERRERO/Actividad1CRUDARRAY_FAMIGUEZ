@@ -2,8 +2,21 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * Clase que contiene metodo principal para ejecutar el programaseries
+ * 
+ * @author Francisco Miguez.
+ * @version 1.6
+ */
 public class programaseries {
-
+	/**
+	 * Entrada a programaseries. Se declaran los array que contienen las series
+	 * recogidas por usuario
+	 * 
+	 * @author Francisco Miguez.
+	 * @version 1.6
+	 * @param args dato de entrada
+	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -148,10 +161,8 @@ public class programaseries {
 			case 4:
 				// Gestiona la opción de buscar dentro de las posiciones de los array
 				try {
-
 					System.out.println("qué serie quiere buscar");
 					nombre = lector.nextLine();
-
 					// Llama al método buscador para encontrar una posición.
 					System.out.println("existe una coincidencia en la posición " + buscador.buscar(serie, nombre));
 					System.out.println("Resultado -1 indica NO ENCONTRADO");
@@ -189,11 +200,9 @@ public class programaseries {
 		 * Método privado para "eliminar" la posición dentro de un array, realmente la
 		 * sustituye.
 		 * 
-		 * @author Francisco Míguez.
+		 * @author Francisco Miguez.
 		 * @version 1.3
-		 * @see CRUD ARRAY EJERCICIO IMF.
 		 */
-
 		cadenas[posicion] = "_";
 		for (int i = posicion; i < cadenas.length - 1; i++) {// Recorre las posiciones del array.
 
