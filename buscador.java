@@ -1,13 +1,18 @@
-
-public class buscador {
-
 	/**
-	 * Método para encontrar la posición que se busca dentro de un array
+	 * Clase que contiene metodo que interactua con la consola principal, contiene
+	 * buscador
 	 * 
-	 * @author Francisco Míguez.
+	 * @author Francisco Miguez
 	 * @version 1.3
+	 */
+public class buscador {
+	/**
+	 * Método para buscar posición dentro de un array
+	 * @author Francisco Miguez.
+	 * @version 1.3
+	 * @param lista array vacio
+	 * @param dato dentro del array
 	 * @return Devuelve una posición.
-	 * @see CRUD ARRAY EJERCICIO IMF.
 	 */
 
 	public static int buscar(String[] lista, String dato) {

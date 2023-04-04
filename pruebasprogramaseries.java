@@ -2,8 +2,21 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * Clase que contiene metodo principal para ejecutar el programaseries
+ * 
+ * @author Francisco Miguez.
+ * @version 1.6
+ */
 public class pruebasprogramaseries {
-
+	/**
+	 * Entrada a programaseries. Se declaran los array que contienen las series
+	 * recogidas por usuario
+	 * 
+	 * @author Francisco Miguez.
+	 * @version 1.6
+	 * @param args dato de entrada
+	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -75,6 +88,10 @@ public class pruebasprogramaseries {
 			case 2:
 				// Gestiona la opción de modificar los array
 				try {
+					if (serie[posicion].equals("_")) {
+						System.out.println("No se puede modificar una posición, el array está vacío. ");
+						break;
+					}
 
 					System.out.println(Arrays.toString(serie));
 					System.out.println("indique qué Serie desea modificar?");
@@ -118,6 +135,10 @@ public class pruebasprogramaseries {
 			case 3:
 				// Gestiona la opción de eliminar posiciónes de los array
 				try {
+					if (serie[posicion].equals("_")) {
+						System.out.println("No se puede eliminar una posición, el array está vacío. ");
+						break;
+					}
 					System.out.println("el array contiene: ");
 					System.out.println(Arrays.toString(serie));
 					System.out.println(Arrays.toString(plataforma));
@@ -189,15 +210,12 @@ public class pruebasprogramaseries {
 		 * Método privado para "eliminar" la posición dentro de un array, realmente la
 		 * sustituye.
 		 * 
-		 * @author Francisco Míguez.
+		 * @author Francisco Miguez.
 		 * @version 1.3
 		 * @see CRUD ARRAY EJERCICIO IMF.
 		 */
 
 		cadenas[posicion] = "_";
-		for (int i = posicion; i < cadenas.length - 1; i++) {// Recorre las posiciones del array.
-
-		}
 
 	}
 
